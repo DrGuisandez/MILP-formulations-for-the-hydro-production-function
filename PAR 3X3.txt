@@ -1,0 +1,541 @@
+Set
+t time index /1*24/
+nt number of turbines of the plant /1*3/
+ninh number of intervals of net heads of the generation characteristic /1*2/
+np number of pieces of flows of the generation characteristic /1*2/
+nqhl number of flows for head losses /1*2/
+
+Scalar
+tf final hour of the stage (h) /24/
+ivt150 initial volume of the transition (Mm3) /96.0337/
+ivt100 initial volume of the transition (Mm3) /299.2845/
+ivt50 initial volume of the transition (Mm3) /819.3228/
+maxfvt150 maximum feasible volume during the transition (Mm3) /99.1326/
+maxfvt100 maximum feasible volume during the transition (Mm3) /304.0402/
+maxfvt50 maximum feasible volume during the transition (Mm3) /829.627/
+minfvt150 minimum feasible volume during the transition (Mm3) /92.93449/
+minfvt100 minimum feasible volume during the transition (Mm3) /294.5283/
+minfvt50 minimum feasible volume during the transition (Mm3) /805.712/
+minfnht150 minimum feasible net head during the transition (m) /108.436/
+minfnht100 minimum feasible net head during the transition (m) /70.5107/
+minfnht50 minimum feasible net head during the transition (m) /31.74148/
+linh150 length of the net head intervals of the transition (m)/3.7016/
+linh100 length of the net head intervals of the transition (m)/1.8946/
+linh50 length of the net head intervals of the transition (m)/0.877/
+he hourly evaporations of the stage (Mm3:km2) /0.00015/
+ks coefficient of hourly seepage lost volume /5.7078e-06/
+fc1 conversion factor ((Mm3:h):(m3:s)) /0.0036/
+maxqboandst150 maximum flow of the bottom outlets and spillways during the transition (m3:s) /1581/
+maxqboandst100 maximum flow of the bottom outlets and spillways during the transition (m3:s) /2439/
+maxqboandst50 maximum flow of the bottom outlets and spillways during the transition (m3:s) /4922.5913/
+minmaxqt150 minimum maximum flow of the hydro unit during the transition (m3:s) /44.436/
+minmaxqt100 minimum maximum flow of the hydro unit during the transition (m3:s) /67/
+minmaxqt50 minimum maximum flow of the hydro unit during the transition (m3:s) /129.483/
+minqt150 minimum flow of the plant during the transition (m3:s) /20/
+minqt100 minimum flow of the plant during the transition (m3:s) /32/
+minqt50 minimum flow of the plant during the transition (m3:s) /73.7415/
+mingt150 minimum generation of the hydro unit of the transition (MW) /17.42/
+mingt100 minimum generation of the hydro unit of the transition (MW) /17.7659/
+mingt50 minimum generation of the hydro unit of the transition (MW) /18.5552/
+suc start-up cost of each hydro unit (€)/130.64/
+wtc wear and tear costs of hydro units due to variations in the generated power (€:MW)/2.22/
+wdt water delay time (h)/3/;
+
+Parameter
+mef150(t) minimum environmental flow (m3:s)
+/
+1 6.15
+2 6.15
+3 6.15
+4 6.15
+5 6.15
+6 6.15
+7 6.15
+8 6.15
+9 6.15
+10 6.15
+11 6.15
+12 6.15
+13 6.15
+14 6.15
+15 6.15
+16 6.15
+17 6.15
+18 6.15
+19 6.15
+20 6.15
+21 6.15
+22 6.15
+23 6.15
+24 6.15
+/
+mef100(t) minimum environmental flow (m3:s)
+/
+1 9.22
+2 9.22
+3 9.22
+4 9.22
+5 9.22
+6 9.22
+7 9.22
+8 9.22
+9 9.22
+10 9.22
+11 9.22
+12 9.22
+13 9.22
+14 9.22
+15 9.22
+16 9.22
+17 9.22
+18 9.22
+19 9.22
+20 9.22
+21 9.22
+22 9.22
+23 9.22
+24 9.22
+/
+mef50(t) minimum environmental flow (m3:s)
+/
+1 15.37
+2 15.37
+3 15.37
+4 15.37
+5 15.37
+6 15.37
+7 15.37
+8 15.37
+9 15.37
+10 15.37
+11 15.37
+12 15.37
+13 15.37
+14 15.37
+15 15.37
+16 15.37
+17 15.37
+18 15.37
+19 15.37
+20 15.37
+21 15.37
+22 15.37
+23 15.37
+24 15.37
+/
+hwi150(t) hourly water inflows (m3:s)
+/
+1 15.6
+2 17.4
+3 21
+4 26.4
+5 33.6
+6 42.6
+7 53.4
+8 66
+9 80.4
+10 96.6
+11 114.6
+12 134.4
+13 134.4
+14 114.6
+15 96.6
+16 80.4
+17 66
+18 53.4
+19 42.6
+20 33.6
+21 26.4
+22 21
+23 17.4
+24 15.6
+/
+hwi100(t) hourly water inflows (m3:s)
+/
+1 24
+2 26.7693
+3 32.3079
+4 40.6159
+5 51.6931
+6 65.5397
+7 82.1555
+8 101.5407
+9 123.6952
+10 148.619
+11 176.3121
+12 206.7745
+13 206.7745
+14 176.3121
+15 148.619
+16 123.6952
+17 101.5407
+18 82.1555
+19 65.5397
+20 51.6931
+21 40.6159
+22 32.3079
+23 26.7693
+24 24
+/
+hep(t) hourly energy prices (€:MWh)
+/
+1 48.0099
+2 46.6525
+3 45.7512
+4 45.4394
+5 46.5276
+6 49.2473
+7 50.0645
+8 52.2123
+9 54.7481
+10 56.0817
+11 57.725
+12 59.1841
+13 57.7606
+14 57.2409
+15 57.6338
+16 57.1661
+17 56.4289
+18 56.2894
+19 64.2977
+20 68.7417
+21 62.076
+22 57.8995
+23 53.8009
+24 50.3564
+/
+cfpenstockhl150(nqhl) coeficients of flows for penstock head losses (s:m2)
+/
+1 0.071383
+2 -0.98963
+/
+cfpenstockhl100(nqhl) coeficients of flows for penstock head losses (s:m2)
+/
+1 0.0241
+2 -0.5213
+/
+cfpenstockhl50(nqhl) coeficients of flows for penstock head losses (s:m2)
+/
+1 0.00479
+2 -0.21716
+/
+cftailracee150(nqhl) coeficients of flows for tailrace elevation (s:m2)
+/
+1 0.029069
+2 0.010624
+/
+cftailracee100(nqhl) coeficients of flows for tailrace elevation (s:m2)
+/
+1 0.012648
+2 0.0046037
+/
+cftailracee50(nqhl) coeficients of flows for tailrace elevation (s:m2)
+/
+1 0.0031561
+2 0.0011438
+/
+pdmaxqnht150(ninh) partial derivative of maximum flow related to the net head of the transition ((m3:s):m)
+/
+1 0.15237
+2 0.27015
+/
+pdminqnht150(ninh) partial derivative of minimum flow related to the net head of the transition ((m3:s):m)
+/
+1 0
+2 0.27015
+/
+pdmingnht150(ninh) partial derivative of minimum generation related to the net head of the transition (MW:m)
+/
+1 0.13736
+2 0.48902
+/
+lp150(np) lengths of the pieces of flow (m3:s)
+/
+1 17.66667
+2 7.333333
+/
+pdmaxqnht100(ninh) partial derivative of maximum flow related to the net head of the transition ((m3:s):m)
+/
+1 0.21391
+2 0.47218
+/
+pdminqnht100(ninh) partial derivative of minimum flow related to the net head of the transition ((m3:s):m)
+/
+1 0.21391
+2 0.31391
+/
+pdmingnht100(ninh) partial derivative of minimum generation related to the net head of the transition (MW:m)
+/
+1 0.38452
+2 0.49977
+/
+lp100(np) lengths of the pieces of flow (m3:s)
+/
+1 24.09995
+2 11
+/
+pdmaxqnht50(ninh) partial derivative of maximum flow related to the net head of the transition ((m3:s):m)
+/
+1 2
+2 2
+/
+pdminqnht50(ninh) partial derivative of minimum flow related to the net head of the transition ((m3:s):m)
+/
+1 1
+2 1
+/
+pdmingnht50(ninh) partial derivative of minimum generation related to the net head of the transition (MW:m)
+/
+1 0.83004
+2 0.86233
+/
+lp50(np) lengths of the pieces of flow (m3:s)
+/
+1 33.82582
+2 22.79267
+/
+Table slop150(ninh,np) slopes of the power-discharge curves (MW:m3:s)
+  1
+1 1.147169
+2 0.04856384
+ +2
+1 0.806397
+2 0.1111634
+Table slop100(ninh,np) slopes of the power-discharge curves (MW:m3:s)
+  1
+1 0.7586765
+2 0.02214061
+ +2
+1 0.5376813
+2 0.02621747
+Table slop50(ninh,np) slopes of the power-discharge curves (MW:m3:s)
+  1
+1 0.3730578
+2 0.01230829
+ +2
+1 0.2308359
+2 0.02303133
+;
+
+variables z;
+binary variables uL150(t,nt), uL100(t,nt), uL50(t,nt);
+positive variables incv150(t), qboands150(t), qp150(t,nt,ninh,np), stc150(t,nt), uNH150(t,nt,ninh), varg150(t,nt)
+ , incv100(t), qboands100(t), qp100(t,nt,ninh,np), stc100(t,nt), uNH100(t,nt,ninh), varg100(t,nt)
+ , incv50(t), qboands50(t), qp50(t,nt,ninh,np), stc50(t,nt), uNH50(t,nt,ninh), varg50(t,nt);
+* incv --> hourly increment of volume (Mm3)
+* qboands --> flow released through the bottom outlets and spillways (m3:s)
+* qp --> flow of piece of each hydro unit (m3:s)
+* stc --> start-up of each hydro unit (€)
+* uL --> variables related to avoid generation below minimum flow of each hydro unit
+* uNH --> variables related to generation, maximum and minimum flow of each hydro unit
+* varg --> hourly variation of generated power of each hidro unit (MW)
+* z --> objective function (€)
+
+incv150.up(t)=maxfvt150-minfvt150;
+qboands150.up(t)=maxqboandst150;
+incv100.up(t)=maxfvt100-minfvt100;
+qboands100.up(t)=maxqboandst100;
+incv50.up(t)=maxfvt50-minfvt50;
+qboands50.up(t)=maxqboandst50;
+
+Equations
+GenPowVarDown150
+GenPowVarUp150
+StartupCost150_1
+StartupCost150_2
+StartupCost150_3
+IncrementOfNetHead150
+LogicOfIncrementOfNetHead150_1
+GenerationBelowMinimumFlow150_1
+LogicOfIncrementOfNetHead150_2
+GenerationBelowMinimumFlow150_2
+LogicPiecesBetweenCurves150_1
+GenerationAboveMaximumFlow150
+EnvFlow150
+Balance150
+FinalVolume150
+GenPowVarDown100
+GenPowVarUp100
+StartupCost100_1
+StartupCost100_2
+StartupCost100_3
+IncrementOfNetHead100
+LogicOfIncrementOfNetHead100_1
+GenerationBelowMinimumFlow100_1
+LogicOfIncrementOfNetHead100_2
+GenerationBelowMinimumFlow100_2
+LogicPiecesBetweenCurves100_1
+GenerationAboveMaximumFlow100
+EnvFlow100
+Balance100
+FinalVolume100
+GenPowVarDown50
+GenPowVarUp50
+StartupCost50_1
+StartupCost50_2
+StartupCost50_3
+IncrementOfNetHead50
+LogicOfIncrementOfNetHead50_1
+GenerationBelowMinimumFlow50_1
+LogicOfIncrementOfNetHead50_2
+GenerationBelowMinimumFlow50_2
+LogicPiecesBetweenCurves50_1
+GenerationAboveMaximumFlow50
+EnvFlow50
+Balance50
+FinalVolume50
+Objective;
+GenPowVarDown150(t,nt)$(ord(t) ne 1).. varg150(t,nt) =g= mingt150*(uL150(t,nt)-uL150(t-1,nt))+sum(ninh, pdmingnht150(ninh)*(uNH150(t,nt,ninh)-uNH150(t-1,nt,ninh))+sum(np, slop150(ninh,np)*(qp150(t,nt,ninh,np)-qp150(t-1,nt,ninh,np))));
+GenPowVarUp150(t,nt)$(ord(t) ne 1).. varg150(t,nt) =g= mingt150*(uL150(t-1,nt)-uL150(t,nt))+sum(ninh, pdmingnht150(ninh)*(uNH150(t-1,nt,ninh)-uNH150(t,nt,ninh))+sum(np, slop150(ninh,np)*(qp150(t-1,nt,ninh,np)-qp150(t,nt,ninh,np))));
+StartupCost150_1(t,nt)$(ord(t) lt tf).. stc150(t+1,nt) =g= suc*(uL150(t+1,nt)-uL150(t,nt));
+StartupCost150_2(t).. uL150(t,'1') =g= uL150(t,'2');
+StartupCost150_3(t).. uL150(t,'2') =g= uL150(t,'3');
+IncrementOfNetHead150(t,nt).. (minfvt150+incv150(t))*0.44585
+ +73.0783
+ -cfpenstockhl150('1')*(minqt150*uL150(t,nt)+sum(ninh, pdminqnht150(ninh)*uNH150(t,nt,ninh))+sum(np, qp150(t,nt,'1',np)))-cfpenstockhl150('2')*uL150(t,nt)-cftailracee150('1')*(minqt150*uL150(t,'1')+sum(ninh, pdminqnht150(ninh)*uNH150(t,'1',ninh))+sum(np, qp150(t,'1','1',np))
+  +minqt150*uL150(t,'2')+sum(ninh, pdminqnht150(ninh)*uNH150(t,'2',ninh))+sum(np, qp150(t,'2','1',np))
+  +minqt150*uL150(t,'3')+sum(ninh, pdminqnht150(ninh)*uNH150(t,'3',ninh))+sum(np, qp150(t,'3','1',np))
+ )-cftailracee150('2')*qboands150(t) =g= minfnht150+sum(ninh, uNH150(t,nt,ninh));
+LogicOfIncrementOfNetHead150_1(t,nt).. uL150(t,nt) =g= uNH150(t,nt,'1')/linh150;
+GenerationBelowMinimumFlow150_1(t,nt,np).. uL150(t,nt) =g= qp150(t,nt,'1',np)/lp150(np);
+LogicOfIncrementOfNetHead150_2(t,nt).. uNH150(t,nt,'1') =g= uNH150(t,nt,'2');
+GenerationBelowMinimumFlow150_2(t,nt,np).. uNH150(t,nt,'1') =g= (linh150/lp150(np))*qp150(t,nt,'2',np);
+LogicPiecesBetweenCurves150_1(t,nt,np).. qp150(t,nt,'1',np) =g= qp150(t,nt,'2',np);
+GenerationAboveMaximumFlow150(t,nt).. minqt150*uL150(t,nt)+sum(ninh, pdminqnht150(ninh)*uNH150(t,nt,ninh))+sum(np, qp150(t,nt,'1',np)) =l= minmaxqt150+sum(ninh, pdmaxqnht150(ninh)*uNH150(t,nt,ninh));
+EnvFlow150(t).. sum(nt, minqt150*uL150(t,nt)+sum(ninh, pdminqnht150(ninh)*uNH150(t,nt,ninh))+sum(np, qp150(t,nt,'1',np)))+qboands150(t) =g= min(mef150(t),hwi150(t));
+Balance150(t).. minfvt150+incv150(t) =e= ivt150$(ord(t) eq 1)+(minfvt150+incv150(t-1))$(ord(t) ne 1)+(hwi150(t)-qboands150(t)-sum(nt, minqt150*uL150(t,nt)+sum(ninh, pdminqnht150(ninh)*uNH150(t,nt,ninh))+sum(np, qp150(t,nt,'1',np))))*fc1-(0.5*(ivt150+minfvt150+incv150(t))*0.03578
+ -0.14494)*he$(ord(t) eq 1)
+ -(0.5*(2*minfvt150+incv150(t-1)+incv150(t))*0.03578
+ -0.14494)*he$(ord(t) ne 1)
+ -(0.5*(ivt150+minfvt150+incv150(t))*ks)$(ord(t) eq 1)-(0.5*(2*minfvt150+incv150(t-1)+incv150(t))*ks)$(ord(t) ne 1);
+FinalVolume150.. minfvt150+incv150('24') =e= ivt150;
+GenPowVarDown100(t,nt)$(ord(t) ne 1).. varg100(t,nt) =g= mingt100*(uL100(t,nt)-uL100(t-1,nt))+sum(ninh, pdmingnht100(ninh)*(uNH100(t,nt,ninh)-uNH100(t-1,nt,ninh))+sum(np, slop100(ninh,np)*(qp100(t,nt,ninh,np)-qp100(t-1,nt,ninh,np))));
+GenPowVarUp100(t,nt)$(ord(t) ne 1).. varg100(t,nt) =g= mingt100*(uL100(t-1,nt)-uL100(t,nt))+sum(ninh, pdmingnht100(ninh)*(uNH100(t-1,nt,ninh)-uNH100(t,nt,ninh))+sum(np, slop100(ninh,np)*(qp100(t-1,nt,ninh,np)-qp100(t,nt,ninh,np))));
+StartupCost100_1(t,nt)$(ord(t) lt tf).. stc100(t+1,nt) =g= suc*(uL100(t+1,nt)-uL100(t,nt));
+StartupCost100_2(t).. uL100(t,'1') =g= uL100(t,'2');
+StartupCost100_3(t).. uL100(t,'2') =g= uL100(t,'3');
+IncrementOfNetHead100(t,nt).. (minfvt100+incv100(t))*0.10527
+ +43.1813
+ -cfpenstockhl100('1')*(minqt100*uL100(t,nt)+sum(ninh, pdminqnht100(ninh)*uNH100(t,nt,ninh))+sum(np, qp100(t,nt,'1',np)))-cfpenstockhl100('2')*uL100(t,nt)-cftailracee100('1')*(minqt100*uL100(t,'1')+sum(ninh, pdminqnht100(ninh)*uNH100(t,'1',ninh))+sum(np, qp100(t,'1','1',np))
+  +minqt100*uL100(t,'2')+sum(ninh, pdminqnht100(ninh)*uNH100(t,'2',ninh))+sum(np, qp100(t,'2','1',np))
+  +minqt100*uL100(t,'3')+sum(ninh, pdminqnht100(ninh)*uNH100(t,'3',ninh))+sum(np, qp100(t,'3','1',np))
+ )-cftailracee100('2')*qboands100(t) =g= minfnht100+sum(ninh, uNH100(t,nt,ninh));
+LogicOfIncrementOfNetHead100_1(t,nt).. uL100(t,nt) =g= uNH100(t,nt,'1')/linh100;
+GenerationBelowMinimumFlow100_1(t,nt,np).. uL100(t,nt) =g= qp100(t,nt,'1',np)/lp100(np);
+LogicOfIncrementOfNetHead100_2(t,nt).. uNH100(t,nt,'1') =g= uNH100(t,nt,'2');
+GenerationBelowMinimumFlow100_2(t,nt,np).. uNH100(t,nt,'1') =g= (linh100/lp100(np))*qp100(t,nt,'2',np);
+LogicPiecesBetweenCurves100_1(t,nt,np).. qp100(t,nt,'1',np) =g= qp100(t,nt,'2',np);
+GenerationAboveMaximumFlow100(t,nt).. minqt100*uL100(t,nt)+sum(ninh, pdminqnht100(ninh)*uNH100(t,nt,ninh))+sum(np, qp100(t,nt,'1',np)) =l= minmaxqt100+sum(ninh, pdmaxqnht100(ninh)*uNH100(t,nt,ninh));
+EnvFlow100(t).. sum(nt, minqt100*uL100(t,nt)+sum(ninh, pdminqnht100(ninh)*uNH100(t,nt,ninh))+sum(np, qp100(t,nt,'1',np)))+qboands100(t) =g= min(mef100(t),hwi100(t));
+Balance100(t).. minfvt100+incv100(t) =e= ivt100$(ord(t) eq 1)+(minfvt100+incv100(t-1))$(ord(t) ne 1)+(hwi100(t)-qboands100(t)-sum(nt, minqt100*uL100(t,nt)+sum(ninh, pdminqnht100(ninh)*uNH100(t,nt,ninh))+sum(np, qp100(t,nt,'1',np))))*fc1-(0.5*(ivt100+minfvt100+incv100(t))*0.037618
+ -0.47508)*he$(ord(t) eq 1)
+ -(0.5*(2*minfvt100+incv100(t-1)+incv100(t))*0.037618
+ -0.47508)*he$(ord(t) ne 1)
+ -(0.5*(ivt100+minfvt100+incv100(t))*ks)$(ord(t) eq 1)-(0.5*(2*minfvt100+incv100(t-1)+incv100(t))*ks)$(ord(t) ne 1);
+FinalVolume100.. minfvt100+incv100('24') =e= ivt100;
+GenPowVarDown50(t,nt)$(ord(t) ne 1).. varg50(t,nt) =g= mingt50*(uL50(t,nt)-uL50(t-1,nt))+sum(ninh, pdmingnht50(ninh)*(uNH50(t,nt,ninh)-uNH50(t-1,nt,ninh))+sum(np, slop50(ninh,np)*(qp50(t,nt,ninh,np)-qp50(t-1,nt,ninh,np))));
+GenPowVarUp50(t,nt)$(ord(t) ne 1).. varg50(t,nt) =g= mingt50*(uL50(t-1,nt)-uL50(t,nt))+sum(ninh, pdmingnht50(ninh)*(uNH50(t-1,nt,ninh)-uNH50(t,nt,ninh))+sum(np, slop50(ninh,np)*(qp50(t-1,nt,ninh,np)-qp50(t,nt,ninh,np))));
+StartupCost50_1(t,nt)$(ord(t) lt tf).. stc50(t+1,nt) =g= suc*(uL50(t+1,nt)-uL50(t,nt));
+StartupCost50_2(t).. uL50(t,'1') =g= uL50(t,'2');
+StartupCost50_3(t).. uL50(t,'2') =g= uL50(t,'3');
+IncrementOfNetHead50(t,nt).. (minfvt50+incv50(t))*0.023924
+ +14.113
+ -cfpenstockhl50('1')*(minqt50*uL50(t,nt)+sum(ninh, pdminqnht50(ninh)*uNH50(t,nt,ninh))+sum(np, qp50(t,nt,'1',np)))-cfpenstockhl50('2')*uL50(t,nt)-cftailracee50('1')*(minqt50*uL50(t,'1')+sum(ninh, pdminqnht50(ninh)*uNH50(t,'1',ninh))+sum(np, qp50(t,'1','1',np))
+  +minqt50*uL50(t,'2')+sum(ninh, pdminqnht50(ninh)*uNH50(t,'2',ninh))+sum(np, qp50(t,'2','1',np))
+  +minqt50*uL50(t,'3')+sum(ninh, pdminqnht50(ninh)*uNH50(t,'3',ninh))+sum(np, qp50(t,'3','1',np))
+ )-cftailracee50('2')*qboands50(t) =g= minfnht50+sum(ninh, uNH50(t,nt,ninh));
+LogicOfIncrementOfNetHead50_1(t,nt).. uL50(t,nt) =g= uNH50(t,nt,'1')/linh50;
+GenerationBelowMinimumFlow50_1(t,nt,np).. uL50(t,nt) =g= qp50(t,nt,'1',np)/lp50(np);
+LogicOfIncrementOfNetHead50_2(t,nt).. uNH50(t,nt,'1') =g= uNH50(t,nt,'2');
+GenerationBelowMinimumFlow50_2(t,nt,np).. uNH50(t,nt,'1') =g= (linh50/lp50(np))*qp50(t,nt,'2',np);
+LogicPiecesBetweenCurves50_1(t,nt,np).. qp50(t,nt,'1',np) =g= qp50(t,nt,'2',np);
+GenerationAboveMaximumFlow50(t,nt).. minqt50*uL50(t,nt)+sum(ninh, pdminqnht50(ninh)*uNH50(t,nt,ninh))+sum(np, qp50(t,nt,'1',np)) =l= minmaxqt50+sum(ninh, pdmaxqnht50(ninh)*uNH50(t,nt,ninh));
+EnvFlow50(t).. sum(nt, minqt50*uL50(t,nt)+sum(ninh, pdminqnht50(ninh)*uNH50(t,nt,ninh))+sum(np, qp50(t,nt,'1',np)))+qboands50(t) =g= mef50(t);
+Balance50(t).. minfvt50+incv50(t) =e= ivt50$(ord(t) eq 1)+(minfvt50+incv50(t-1))$(ord(t) ne 1)+((sum(nt, minqt150*uL150(t-wdt,nt)+sum(ninh, pdminqnht150(ninh)*uNH150(t-wdt,nt,ninh))+sum(np, qp150(t-wdt,nt,'1',np)))+qboands150(t-wdt)+sum(nt, minqt100*uL100(t-wdt,nt)+sum(ninh, pdminqnht100(ninh)*uNH100(t-wdt,nt,ninh))+sum(np, qp100(t-wdt,nt,'1',np)))+qboands100(t-wdt))*fc1)$(ord(t) gt wdt)
+-(qboands50(t)+sum(nt, minqt50*uL50(t,nt)+sum(ninh, pdminqnht50(ninh)*uNH50(t,nt,ninh))+sum(np, qp50(t,nt,'1',np))))*fc1-(0.5*(ivt50+minfvt50+incv50(t))*0.039321
+ -1.3567)*he$(ord(t) eq 1)
+ -(0.5*(2*minfvt50+incv50(t-1)+incv50(t))*0.039321
+ -1.3567)*he$(ord(t) ne 1)
+ -(0.5*(ivt50+minfvt50+incv50(t))*ks)$(ord(t) eq 1)-(0.5*(2*minfvt50+incv50(t-1)+incv50(t))*ks)$(ord(t) ne 1);
+FinalVolume50.. minfvt50+incv50('24') =e= ivt50;
+Objective.. z =e= sum((t,nt), hep(t)*(mingt150*uL150(t,nt)+sum(ninh, pdmingnht150(ninh)*uNH150(t,nt,ninh)+sum(np, slop150(ninh,np)*qp150(t,nt,ninh,np)))+mingt100*uL100(t,nt)+sum(ninh, pdmingnht100(ninh)*uNH100(t,nt,ninh)+sum(np, slop100(ninh,np)*qp100(t,nt,ninh,np)))+mingt50*uL50(t,nt)+sum(ninh, pdmingnht50(ninh)*uNH50(t,nt,ninh)+sum(np, slop50(ninh,np)*qp50(t,nt,ninh,np))))-wtc*(varg150(t,nt)+varg100(t,nt)+varg50(t,nt))-stc150(t,nt)-stc100(t,nt)-stc50(t,nt));
+
+model transition /all/;
+transition.optfile=5;
+option mip=cplex;
+solve transition using mip maximizing z;
+
+parameter v150(t), v100(t), v50(t), qboands150r(t), qboands100r(t), qboands50r(t)
+ , q150_1(t), g150_1r(t), q100_1(t), g100_1r(t), q50_1(t), g50_1r(t)
+ , q150_2(t), g150_2r(t), q100_2(t), g100_2r(t), q50_2(t), g50_2r(t)
+ , q150_3(t), g150_3r(t), q100_3(t), g100_3r(t), q50_3(t), g50_3r(t)
+ , profit(t), solstatus(t), gap(t), profit150(t), profit100(t), profit50(t);
+loop(t,
+v150(t)=minfvt150+incv150.l(t);
+v100(t)=minfvt100+incv100.l(t);
+v50(t)=minfvt50+incv50.l(t);
+q150_1(t)=minqt150*uL150.l(t,'1')+sum(ninh, pdminqnht150(ninh)*uNH150.l(t,'1',ninh))+sum(np, qp150.l(t,'1','1',np));
+q150_1(t)$(uL150.l(t,'1') eq 0)=0.000001;
+g150_1r(t)=mingt150*uL150.l(t,'1')+sum(ninh, pdmingnht150(ninh)*uNH150.l(t,'1',ninh)+sum(np, slop150(ninh,np)*qp150.l(t,'1',ninh,np)));
+g150_1r(t)$(uL150.l(t,'1') eq 0)=0.000001;
+q150_2(t)=minqt150*uL150.l(t,'2')+sum(ninh, pdminqnht150(ninh)*uNH150.l(t,'2',ninh))+sum(np, qp150.l(t,'2','1',np));
+q150_2(t)$(uL150.l(t,'2') eq 0)=0.000001;
+g150_2r(t)=mingt150*uL150.l(t,'2')+sum(ninh, pdmingnht150(ninh)*uNH150.l(t,'2',ninh)+sum(np, slop150(ninh,np)*qp150.l(t,'2',ninh,np)));
+g150_2r(t)$(uL150.l(t,'2') eq 0)=0.000001;
+q150_3(t)=minqt150*uL150.l(t,'3')+sum(ninh, pdminqnht150(ninh)*uNH150.l(t,'3',ninh))+sum(np, qp150.l(t,'3','1',np));
+q150_3(t)$(uL150.l(t,'3') eq 0)=0.000001;
+g150_3r(t)=mingt150*uL150.l(t,'3')+sum(ninh, pdmingnht150(ninh)*uNH150.l(t,'3',ninh)+sum(np, slop150(ninh,np)*qp150.l(t,'3',ninh,np)));
+g150_3r(t)$(uL150.l(t,'3') eq 0)=0.000001;
+qboands150r(t)=qboands150.l(t);
+qboands150r(t)$(qboands150r(t) eq 0)=0.000001;
+q100_1(t)=minqt100*uL100.l(t,'1')+sum(ninh, pdminqnht100(ninh)*uNH100.l(t,'1',ninh))+sum(np, qp100.l(t,'1','1',np));
+q100_1(t)$(uL100.l(t,'1') eq 0)=0.000001;
+g100_1r(t)=mingt100*uL100.l(t,'1')+sum(ninh, pdmingnht100(ninh)*uNH100.l(t,'1',ninh)+sum(np, slop100(ninh,np)*qp100.l(t,'1',ninh,np)));
+g100_1r(t)$(uL100.l(t,'1') eq 0)=0.000001;
+q100_2(t)=minqt100*uL100.l(t,'2')+sum(ninh, pdminqnht100(ninh)*uNH100.l(t,'2',ninh))+sum(np, qp100.l(t,'2','1',np));
+q100_2(t)$(uL100.l(t,'2') eq 0)=0.000001;
+g100_2r(t)=mingt100*uL100.l(t,'2')+sum(ninh, pdmingnht100(ninh)*uNH100.l(t,'2',ninh)+sum(np, slop100(ninh,np)*qp100.l(t,'2',ninh,np)));
+g100_2r(t)$(uL100.l(t,'2') eq 0)=0.000001;
+q100_3(t)=minqt100*uL100.l(t,'3')+sum(ninh, pdminqnht100(ninh)*uNH100.l(t,'3',ninh))+sum(np, qp100.l(t,'3','1',np));
+q100_3(t)$(uL100.l(t,'3') eq 0)=0.000001;
+g100_3r(t)=mingt100*uL100.l(t,'3')+sum(ninh, pdmingnht100(ninh)*uNH100.l(t,'3',ninh)+sum(np, slop100(ninh,np)*qp100.l(t,'3',ninh,np)));
+g100_3r(t)$(uL100.l(t,'3') eq 0)=0.000001;
+qboands100r(t)=qboands100.l(t);
+qboands100r(t)$(qboands100r(t) eq 0)=0.000001;
+q50_1(t)=minqt50*uL50.l(t,'1')+sum(ninh, pdminqnht50(ninh)*uNH50.l(t,'1',ninh))+sum(np, qp50.l(t,'1','1',np));
+q50_1(t)$(uL50.l(t,'1') eq 0)=0.000001;
+g50_1r(t)=mingt50*uL50.l(t,'1')+sum(ninh, pdmingnht50(ninh)*uNH50.l(t,'1',ninh)+sum(np, slop50(ninh,np)*qp50.l(t,'1',ninh,np)));
+g50_1r(t)$(uL50.l(t,'1') eq 0)=0.000001;
+q50_2(t)=minqt50*uL50.l(t,'2')+sum(ninh, pdminqnht50(ninh)*uNH50.l(t,'2',ninh))+sum(np, qp50.l(t,'2','1',np));
+q50_2(t)$(uL50.l(t,'2') eq 0)=0.000001;
+g50_2r(t)=mingt50*uL50.l(t,'2')+sum(ninh, pdmingnht50(ninh)*uNH50.l(t,'2',ninh)+sum(np, slop50(ninh,np)*qp50.l(t,'2',ninh,np)));
+g50_2r(t)$(uL50.l(t,'2') eq 0)=0.000001;
+q50_3(t)=minqt50*uL50.l(t,'3')+sum(ninh, pdminqnht50(ninh)*uNH50.l(t,'3',ninh))+sum(np, qp50.l(t,'3','1',np));
+q50_3(t)$(uL50.l(t,'3') eq 0)=0.000001;
+g50_3r(t)=mingt50*uL50.l(t,'3')+sum(ninh, pdmingnht50(ninh)*uNH50.l(t,'3',ninh)+sum(np, slop50(ninh,np)*qp50.l(t,'3',ninh,np)));
+g50_3r(t)$(uL50.l(t,'3') eq 0)=0.000001;
+qboands50r(t)=qboands50.l(t);
+qboands50r(t)$(qboands50r(t) eq 0)=0.000001;
+);
+profit('1')=z.l;
+profit(t)$(ord(t) ge 2)=0;
+solstatus('1')=transition.modelstat;
+solstatus(t)$(ord(t) ge 2)=0;
+gap('1')=abs(transition.objest-transition.objval)/(1e-10+abs(transition.objval));
+profit150('1')=sum((t,nt), hep(t)*(mingt150*uL150.l(t,nt)+sum(ninh, pdmingnht150(ninh)*uNH150.l(t,nt,ninh)+sum(np, slop150(ninh,np)*qp150.l(t,nt,ninh,np))))-wtc*varg150.l(t,nt)-stc150.l(t,nt));
+profit150(t)$(ord(t) ge 2)=0;
+profit100('1')=sum((t,nt), hep(t)*(mingt100*uL100.l(t,nt)+sum(ninh, pdmingnht100(ninh)*uNH100.l(t,nt,ninh)+sum(np, slop100(ninh,np)*qp100.l(t,nt,ninh,np))))-wtc*varg100.l(t,nt)-stc100.l(t,nt));
+profit100(t)$(ord(t) ge 2)=0;
+profit50('1')=sum((t,nt), hep(t)*(mingt50*uL50.l(t,nt)+sum(ninh, pdmingnht50(ninh)*uNH50.l(t,nt,ninh)+sum(np, slop50(ninh,np)*qp50.l(t,nt,ninh,np))))-wtc*varg50.l(t,nt)-stc50.l(t,nt));
+profit50(t)$(ord(t) ge 2)=0;
+
+display z.l, v150, v100, v50
+ , q150_1, g150_1r, q100_1, g100_1r, q50_1, g50_1r
+ , q150_2, g150_2r, q100_2, g100_2r, q50_2, g50_2r
+ , q150_3, g150_3r, q100_3, g100_3r, q50_3, g50_3r
+ ;
+
+file results/results.txt/;
+put results;
+loop(t,put t.tl,@3,v150(t):8:2,@10,v100(t):8:2,@20,v50(t):9:2,@35,qboands150r(t):8:2,@45,qboands100r(t):8:2,@55,qboands50r(t):8:2
+ ,@65,q150_1(t):8:2,@75,q150_2(t):8:2,@85,q150_3(t):8:2,@95,q100_1(t):8:2,@105,q100_2(t):8:2,@115,q100_3(t):8:2,@125,q50_1(t):8:2,@135,q50_2(t):8:2,@145,q50_3(t):8:2,@155,gap(t):8:4,@175,profit(t):14:4,@195,solstatus(t):2:0,@200,profit150(t):10:2,@215,profit100(t):10:2,@230,profit50(t):10:2/);
